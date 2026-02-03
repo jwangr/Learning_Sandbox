@@ -27,6 +27,6 @@ jobs:
     - name: Output Result
       if: ${{ steps.validate-branch.outputs.valid-branch }} = 'false'
       run: |
-        BRANCH_NAME="${{ github.ref#refs/heads/ }}"
+        BRANCH_NAME="${{ github.ref }}"
         echo "The branch name '${BRANCH_NAME}' is not valid. Name the branch in the format YAS-<number>-<description>."
         exit 1; # Fails the workflow
