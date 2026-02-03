@@ -8,4 +8,4 @@
 ## Sharing with Team
 - Create a separate directory, e.g. githooks, so hidden .git/hooks can be shared
 - Configure git to use that directory for hooks ```git config core.hooksPath hooks```
-- Each user should run: ```chmod +x hooks/pre-commit```
+- Each user should run: ```chmod +x githooks/pre-commit```
