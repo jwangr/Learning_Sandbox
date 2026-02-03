@@ -1,11 +1,17 @@
 name: Branch Validation Workflow
 
 on:
+  push:
+    branches:
+      - '**' # Trigger on all branches
+  pull_request:
+    branches:
+      - '**' # Trigger on all branches
   workflow_dispatch:
 
 jobs:
   Validate_Branch:
-    name: Validator Branch
+    name: Validate Branch Name
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
