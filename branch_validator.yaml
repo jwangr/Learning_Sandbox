@@ -1,0 +1,19 @@
+name: Branch Validation Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Validate_Branch:
+    name: Validator Branch
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate Branch
+      uses: KinsonDigital/BranchValidator@v1.0.0-preview.4 # Make sure this is the latest version
+      with:
+        branch-name: "${{ github.ref }}" # The current branch where the workflow is running.
+        validation-logic: "matches('YAS-\\d+-[A-Za-z]+')"
+        trim-from-start: "refs/heads/"
+        fail-when-not-valid: true # Optional. Default is true.
