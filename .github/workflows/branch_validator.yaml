@@ -1,11 +1,17 @@
 name: Branch Validation Workflow
 
 on:
+  push:
+    branches:
+      - '**' # Trigger on all branches
+  pull_request:
+    branches:
+      - '**' # Trigger on all branches
   workflow_dispatch:
 
 jobs:
   Validate_Branch:
-    name: Validator Branch
+    name: Validate Branch Name
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -14,12 +20,13 @@ jobs:
       uses: KinsonDigital/BranchValidator@v1.0.0-preview.4 # Make sure this is the latest version
       with:
         branch-name: "${{ github.ref }}" # The current branch where the workflow is running.
-        validation-logic: "matches('YAS-\\d+-[A-Za-z]+')"
+        validation-logic: "equalTo('YAS-#-*')"
         trim-from-start: "refs/heads/"
-        fail-when-not-valid: false # Optional. Default is true.
-    
+        fail-when-not-valid: true # Optional. Default is true.
+  
     - name: Output Result
       if: ${{ steps.validate-branch.outputs.valid-branch }} = 'false'
       run: |
-        echo "The branch name '${{ github.ref }}' is not valid. Name the branch in the format YAS-<number>-<description>."
+        BRANCH_NAME="${{ github.ref }}"
+        echo "The branch name '${BRANCH_NAME}' is not valid. Name the branch in the format YAS-<number>-<description>."
         exit 1; # Fails the workflow
