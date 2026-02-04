@@ -7,8 +7,8 @@
 
 ## Sharing with Team
 - Create a separate directory, e.g. githooks, so hidden .git/hooks can be shared
-- Configure git to use that directory for hooks ```git config core.hooksPath hooks```
+- Configure git to use that directory for hooks ```git config core.hooksPath githooks```
 - Each user should run: ```chmod +x githooks/pre-commit```
 
 # Testing Branches
-- YAS-9a-testing
+- YAS-9a-testing: first run config
