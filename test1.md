@@ -17,4 +17,4 @@
 - YAS-abc-testing
     - If you don't run any commands, and try: Test fails
     - Run chmod +x pre-commit first: fails
-    - Run git config core.hooksPath hooks without chmod:
+    - Run git config core.hooksPath hooks without chmod: 
