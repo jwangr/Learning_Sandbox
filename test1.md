@@ -15,4 +15,6 @@
     - Run ```git config --get core.hooksPath``` to check folder holding hook
     - Question: does each user need to run chmod +x for these hooks to be executed?
 - YAS-abc-testing
-    - If you don't run any commands, and try:
+    - If you don't run any commands, and try: Test fails
+    - Run chmod +x pre-commit first: fails
+    - Run git config core.hooksPath hooks without chmod:
