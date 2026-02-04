@@ -11,4 +11,6 @@
 - Each user should run: ```chmod +x githooks/pre-commit```
 
 # Testing Branches
-- YAS-9a-testing: first run config
+- YAS-9a-testing: first run config;
+    - Run ```git config --get core.hooksPath``` to check folder holding hook
+    - Question: does each user need to run chmod +x for these hooks to be executed?
