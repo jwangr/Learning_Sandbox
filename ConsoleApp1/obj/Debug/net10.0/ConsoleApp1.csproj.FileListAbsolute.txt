@@ -1,0 +1,14 @@
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.deps.json
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.runtimeconfig.json
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.dll
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.AssemblyInfoInputs.cache
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.AssemblyInfo.cs
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.dll
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/refint/ConsoleApp1.dll
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.pdb
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.genruntimeconfig.cache
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.pdb
+/Users/regina.wang/dev_personal/Learning_Sandbox/ConsoleApp1/obj/Debug/net10.0/ref/ConsoleApp1.dll
