@@ -4,7 +4,7 @@
 # Runs on developer's local machine
 
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD) # Get the current branch name
-BRANCH_REGEX='^YAS-[0-9]+-[A-Za-z]+$' # Define the regex pattern
+BRANCH_REGEX='^YAS-[0-9]+-.+$' # Define the regex pattern
 
 # Check if the branch name matches the pattern
 if ! [[ "$BRANCH_NAME" =~ $BRANCH_REGEX ]]; then
