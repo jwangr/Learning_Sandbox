@@ -9,7 +9,7 @@ using TodoApi.Models;
 
 namespace ToDoApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/TodoItems")] // by convention, name the controller like so. Case-insensitive routing
     [ApiController]
     public class TodoItemsController : ControllerBase
     {
@@ -45,10 +45,10 @@ namespace ToDoApi.Controllers
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
-            _context.TodoItems.Add(todoItem);
+            _context.TodoItems.Add(todoItem); // adds item to in-memory database context
             await _context.SaveChangesAsync();
 
-            //    return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+            // ASP.NET Core helper method -> Creates HTTP 201 (Created response), sets Location header to URL (created item can be retrieved here)
             return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
         }
 
@@ -81,17 +81,6 @@ namespace ToDoApi.Controllers
             }
 
             return NoContent();
-        }
-
-        // POST: api/TodoItems
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
-        {
-            _context.TodoItems.Add(todoItem);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
         }
 
         // DELETE: api/TodoItems/5
