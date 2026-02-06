@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using PtsApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddDbContext<PtContext>(opt =>
+    opt.UseInMemoryDatabase("Patients"));
 
 var app = builder.Build();
 
@@ -12,6 +16,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwaggerUi(options =>
+    {
+        options.DocumentPath = "/openapi/v1.json"; // localhost:7086/openapi/v1.json shows OpenAPI specifications
+    });
 }
 
 app.UseHttpsRedirection();

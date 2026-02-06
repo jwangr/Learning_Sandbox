@@ -14,3 +14,6 @@ dotnet dev-certs https --trust
 
 dotnet run --launch-profile https
 
+# Testing UI using Swagger
+dotnet add package NSwag.AspNetCore
+Configure it in Program.cs
