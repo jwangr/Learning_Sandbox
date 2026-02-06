@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using PtsApi.Models;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<PatientContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PatientContext") ?? throw new InvalidOperationException("Connection string 'PatientContext' not found.")));
 
 // Add services to the container.
 
