@@ -73,14 +73,13 @@ namespace PtsApi.Controllers
         }
 
         // POST: api/Patients
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Patient>> PostPatient(Patient patient)
         {
             _context.Patient.Add(patient);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPatient", new { id = patient.Id }, patient);
+            return CreatedAtAction(nameof(GetPatient), new { id = patient.Id }, patient);
         }
 
         // DELETE: api/Patients/5

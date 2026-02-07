@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PtsApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+831ab6e02c17a52db33caa9f9a7fcd672a6611ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df78238e25b3899fc4ec54c8629b2bd2093a2ffb")]
 [assembly: System.Reflection.AssemblyProductAttribute("PtsApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PtsApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
