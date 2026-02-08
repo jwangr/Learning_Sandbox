@@ -19,4 +19,10 @@ dotnet add package NSwag.AspNetCore
 Configure it in Program.cs
 
 # Instaklling PostgreSQL EF Core provider
-dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+```dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL```
+Ensure dotnet ef is installed
+Then create first migration
+```bash
+dotnet ef migrations add InitialCreate
+dotnet ef database update # applies migration to Neon
+```

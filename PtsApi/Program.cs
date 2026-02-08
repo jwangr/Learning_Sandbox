@@ -2,18 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using PtsApi.Models;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
-// Added context using PostgreSQL
+
+// Register context using PostgreSQL
 builder.Services.AddDbContext<PatientContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'PatientContext' not found.")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("NeonDatabase") ?? throw new InvalidOperationException("Connection string 'PatientContext' not found.")));
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddDbContext<PtContext>(opt =>
-    opt.UseInMemoryDatabase("Patients"));
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

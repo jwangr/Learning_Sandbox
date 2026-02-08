@@ -569,3 +569,5 @@ E:\Documents\Software\Learning_Sandbox\PtsApi\obj\Debug\net10.0\refint\PtsApi.dl
 E:\Documents\Software\Learning_Sandbox\PtsApi\obj\Debug\net10.0\PtsApi.pdb
 E:\Documents\Software\Learning_Sandbox\PtsApi\obj\Debug\net10.0\PtsApi.genruntimeconfig.cache
 E:\Documents\Software\Learning_Sandbox\PtsApi\obj\Debug\net10.0\ref\PtsApi.dll
+E:\Documents\Software\Learning_Sandbox\PtsApi\bin\Debug\net10.0\Npgsql.dll
+E:\Documents\Software\Learning_Sandbox\PtsApi\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

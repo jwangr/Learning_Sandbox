@@ -12,5 +12,5 @@ public class PatientContext : DbContext
     {
     }
 
-    public DbSet<PtsApi.Models.Patient> Patient { get; set; } = default!;
+    public DbSet<Patient> Patient { get; set; } = default!;
 }
