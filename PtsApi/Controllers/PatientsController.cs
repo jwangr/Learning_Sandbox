@@ -9,7 +9,7 @@ using PtsApi.Models;
 
 namespace PtsApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[Patients]")]
     [ApiController]
     public class PatientsController : ControllerBase
     {
@@ -100,7 +100,7 @@ namespace PtsApi.Controllers
 
         private bool PatientExists(long id)
         {
-            return _context.Patient.Any(e => e.Id == id);
+            return _context.Patient.Any((System.Linq.Expressions.Expression<Func<Patient, bool>>)(e => e.Id == id));
         }
     }
 }

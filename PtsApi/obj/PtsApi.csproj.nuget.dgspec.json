@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/regina.wang/dev_personal/Learning_Sandbox/PtsApi/PtsApi.csproj": {}
+    "E:\\Documents\\Software\\Learning_Sandbox\\PtsApi\\PtsApi.csproj": {}
   },
   "projects": {
-    "/Users/regina.wang/dev_personal/Learning_Sandbox/PtsApi/PtsApi.csproj": {
+    "E:\\Documents\\Software\\Learning_Sandbox\\PtsApi\\PtsApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/regina.wang/dev_personal/Learning_Sandbox/PtsApi/PtsApi.csproj",
+        "projectUniqueName": "E:\\Documents\\Software\\Learning_Sandbox\\PtsApi\\PtsApi.csproj",
         "projectName": "PtsApi",
-        "projectPath": "/Users/regina.wang/dev_personal/Learning_Sandbox/PtsApi/PtsApi.csproj",
-        "packagesPath": "/Users/regina.wang/.nuget/packages/",
-        "outputPath": "/Users/regina.wang/dev_personal/Learning_Sandbox/PtsApi/obj/",
+        "projectPath": "E:\\Documents\\Software\\Learning_Sandbox\\PtsApi\\PtsApi.csproj",
+        "packagesPath": "C:\\Users\\jwang\\.nuget\\packages\\",
+        "outputPath": "E:\\Documents\\Software\\Learning_Sandbox\\PtsApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/regina.wang/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jwang\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -75,6 +75,10 @@
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[14.6.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
           "imports": [
@@ -96,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

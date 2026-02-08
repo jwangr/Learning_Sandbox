@@ -17,3 +17,6 @@ dotnet run --launch-profile https
 # Testing UI using Swagger
 dotnet add package NSwag.AspNetCore
 Configure it in Program.cs
+
+# Instaklling PostgreSQL EF Core provider
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
