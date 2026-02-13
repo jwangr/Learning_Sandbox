@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using CoreEmpty.Models;
 
 namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do whatever
 {
-    [Controller] // not obligatory
+    [Controller] // not obligatory, but okay practice
     public class HomeController : Controller // _controller is automatically identified by ASP.NET core as a controller 
-    // // public class -> can be instantiated by ASP Core
+    // public class -> can be instantiated by ASP Core
     // Optional: Controller class (from AspNetCore.Mvc)
 
     {
@@ -30,5 +31,17 @@ namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do w
         {
             return Content("This is the response body and next argument is the content-MIME type", "text/plain");
         }
-    }
+
+        [Route("person")]
+
+        // Using a person model from CoreEmpty.Models
+        public JsonResult Person()
+        {
+            // Initialise new person, with unique Guid
+            Person person = new() { Id = Guid.NewGuid(), FirstName = "John", LastName = "Smith", Age = 25 };
+            
+            // return new JsonResult(person);
+            return Json(person); // this is the short-hand way
+        }
+    };
 }
