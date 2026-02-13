@@ -2,14 +2,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do whatever
 {
+    [Controller] // not obligatory
     public class HomeController : Controller // _controller is automatically identified by ASP.NET core as a controller 
     // // public class -> can be instantiated by ASP Core
+    // Optional: Controller class (from AspNetCore.Mvc)
+
     {
         // Define action methods
         [Route("sayhello")] // The route is an attribute. Can add multiple routes for same action method
         [Route("sayhello2")] // The route is an attribute. Can add multiple routes for same action method
         [Route("/")] // This is the default url
-        public string Index () // by convention, default route will open this action method
+        public string Index() // by convention, default route will open this action method
         {
             // returns action result
 
@@ -17,15 +20,15 @@ namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do w
         }
 
         [Route("contact-us")]
-        public string Contact ()
+        public string Contact()
         {
             return "Contact us now!";
         }
 
         [Route("about")]
-        public string About ()
+        public ContentResult About() // can return content result
         {
-            return "About us is here!";
+            return Content("This is the response body and next argument is the content-MIME type", "text/plain");
         }
     }
 }
