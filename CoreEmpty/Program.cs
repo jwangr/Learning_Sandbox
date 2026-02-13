@@ -14,9 +14,11 @@ app.MapGet("/", async (HttpContext context) =>
 });
 
 // Map executes for any REST
-app.Map("map1", async (context) =>
+app.Map("files/{filename}.{extension}", async (context) =>
 {
-    await context.Response.WriteAsync("In Map 1");
+    string? filename = Convert.ToString(context.Request.RouteValues["filename"]); // access route paramater. Convert obj -> any type.
+    string? extension = Convert.ToString(context.Request.RouteValues["Extension"]); // route parameter names are case insensitive
+    await context.Response.WriteAsync($"in files {filename}.{extension}");
 });
 app.Map("map2", async (context) =>
 {
