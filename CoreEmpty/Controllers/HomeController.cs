@@ -53,37 +53,32 @@ namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do w
             // Book id should be applied
             if (!Request.Query.ContainsKey("bookid"))
             {
-                Response.StatusCode = 400;
-                return Content("Book Id should be supplied");
+                return BadRequest("Book Id should be supplied");
             }
             ;
 
             // Book id should not be empty
             if (string.IsNullOrEmpty(Convert.ToString(Request.Query["bookid"])))
             {
-                Response.StatusCode = 400;
-                return Content("Book Id should be supplied");
+                return BadRequest("Book Id should be supplied");
             }
 
             // Book id should be between 1 and 1000
             int bookid = Convert.ToInt16(Request.Query["bookid"]);
             if (bookid <= 0 || bookid > 1000)
             {
-                Response.StatusCode = 400;
-                return Content("Please input valid book id");
+                return NotFound("Please input valid book id");
             }
 
             // user should be logged in
             bool? isLoggedIn = Convert.ToBoolean(Request.Query["isLoggedIn"]);
-            if (!isLoggedIn.HasValue || !isLoggedIn.Value)
+            if (!isLoggedIn.HasValue || !isLoggedIn.Value )
             {
-                Response.StatusCode = 400;
-                return Content("User must be signed in");
+                return Unauthorized("User must be signed in");
             }
 
             // Return default status code 200
             return Content($"book with ID of {bookid} was found");
-
 
         }
     };
