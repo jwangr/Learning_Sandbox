@@ -11,9 +11,9 @@ namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do w
         // With query parameters: /book?bookid={int}&isLoggedIn={true}
         // Note route parameters used - have higher priority than query parameters
 
-        public IActionResult Book(int? bookId, bool? isLoggedIn)
-        // Can supply arg - picked up by model binding (ASP.NET core)
-        // doesn't need to use Request.queyry... each time to retrrieve bookid
+        public IActionResult Book([FromRoute]int? bookId, [FromQuery] bool? isLoggedIn)
+        // bookId only retrieved from route
+        // isLoggedIn only retrieved from query
 
         {
             if (bookId.HasValue == false)
