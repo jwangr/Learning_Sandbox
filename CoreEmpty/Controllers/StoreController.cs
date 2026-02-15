@@ -7,8 +7,9 @@ namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do w
     public class StoreController : Controller
     // public class -> can be instantiated by ASP Core
     {
-        [Route("store/books")]
+        [Route("store/books/{bookId?}/{isLoggedIn?}")]
         // With query parameters: /book?bookid={int}&isLoggedIn={true}
+        // Note route parameters used - have higher priority than query parameters
 
         public IActionResult Book(int? bookId, bool? isLoggedIn)
         // Can supply arg - picked up by model binding (ASP.NET core)
