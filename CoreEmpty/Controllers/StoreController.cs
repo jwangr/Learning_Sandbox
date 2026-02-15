@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do whatever
@@ -8,13 +9,27 @@ namespace CoreEmpty.Controllers // follows ProjectName.Controller but u can do w
     {
         [Route("store/books")]
         // With query parameters: /book?bookid={int}&isLoggedIn={true}
-        public IActionResult Book()
+
+        public IActionResult Book(int? bookId, bool? isLoggedIn)
+        // Can supply arg - picked up by model binding (ASP.NET core)
+        // doesn't need to use Request.queyry... each time to retrrieve bookid
+
         {
-            return new RedirectToActionResult("Book", "Home", new { });
-            // give dummy value for routeValue here...cause not needed. Otherwise redirect with route value id="bookId" for e.g.
-            // returns 302 - Found other website
-            // permanent: true = returns 301 (moved permanently)
-            // return LocalRedirect("url route") - only works within the same application, without needing to use action name and controller name; not as widely used. Returns 302, unless permanent: true
+            if (bookId.HasValue == false)
+            {
+                return BadRequest("Book id is not supplied");
+            }
+
+            if (bookId <= 0)
+            {
+                return BadRequest("Supply valid book id");
+            }
+            if (isLoggedIn == false)
+            {
+                return StatusCode(401); // automatically specified unauthorised user
+            }
+
+            return Content("Book is found");
         }
     };
 }
